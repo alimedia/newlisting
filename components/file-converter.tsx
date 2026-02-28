@@ -12,6 +12,7 @@ import {
   Loader2,
   RefreshCw,
   ZoomIn,
+  Zap,
 } from 'lucide-react'
 
 export type ConversionType =
@@ -109,10 +110,6 @@ async function convertImageFormat(
 
 // Convert images array to a simple PDF using PDF blob
 async function imagesToPdf(files: File[]): Promise<Blob> {
-  // Dynamically import jspdf if available, otherwise use canvas+blob method
-  // We'll create a minimal valid PDF manually using canvas for first image
-  // For production this uses a well-known approach with data URLs
-
   const canvases: { w: number; h: number; dataUrl: string }[] = []
 
   for (const file of files) {
@@ -202,11 +199,8 @@ async function imagesToPdf(files: File[]): Promise<Blob> {
   return new Blob([encoder.encode(pdf)], { type: 'application/pdf' })
 }
 
-// Convert a PDF page to an image using canvas (requires PDF.js or similar)
-// We'll use a simpler approach: render PDF page via an iframe approach and capture
-// Since PDF.js CDN is heavy, we'll use a reliable approach that creates an image from the PDF
+// Convert a PDF page to an image using canvas
 async function pdfToImages(file: File, outputFormat: 'image/jpeg' | 'image/png'): Promise<Blob[]> {
-  // Load PDF.js from CDN
   if (typeof window === 'undefined') return []
 
   await new Promise<void>((resolve, reject) => {
@@ -232,7 +226,7 @@ async function pdfToImages(file: File, outputFormat: 'image/jpeg' | 'image/png')
   }
 
   const blobs: Blob[] = []
-  const scale = 2.0 // Higher scale = better quality
+  const scale = 2.0
 
   for (let i = 1; i <= pdf.numPages; i++) {
     const page = await pdf.getPage(i)
@@ -555,7 +549,6 @@ export default function FileConverter({
             {results.map((r, i) => (
               <div key={i} className={`flex items-center gap-3 p-3.5 bg-card rounded-xl border ${c.border}`}>
                 {r.type.startsWith('image/') ? (
-                  // Preview image
                   <div className="w-10 h-10 rounded-lg overflow-hidden bg-secondary flex items-center justify-center shrink-0">
                     <img
                       src={r.url}

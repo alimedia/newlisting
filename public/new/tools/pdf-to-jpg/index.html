@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PDF to JPG Converter Free Online - Convert PDF to JPG Images | TooAI24</title>
+  <meta name="description" content="Convert PDF to JPG images online for free. Extract all pages from any PDF as high-quality JPG photos instantly in your browser. No upload, no signup needed." />
+  <meta name="keywords" content="pdf to jpg converter, convert pdf to jpg online free, pdf to jpeg, extract images from pdf, pdf page to jpg" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://toolai24.com/new/tools/pdf-to-jpg/" />
+  <meta property="og:title" content="PDF to JPG Converter Free Online | TooAI24" />
+  <meta property="og:description" content="Convert PDF to JPG images free, fast and private — all in your browser." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="../../index.html" class="logo">
+      <div class="logo-icon">T</div>
+      <span class="logo-text">Too<span>AI24</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="../../index.html">Home</a>
+      <a href="index.html" class="active">PDF to JPG</a>
+      <a href="../pdf-to-png/index.html">PDF to PNG</a>
+      <a href="../jpg-to-pdf/index.html">JPG to PDF</a>
+      <a href="../png-to-pdf/index.html">PNG to PDF</a>
+      <a href="../jpg-to-png/index.html">JPG to PNG</a>
+    </div>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="../../index.html">Home</a>
+    <a href="index.html">PDF to JPG</a>
+    <a href="../pdf-to-png/index.html">PDF to PNG</a>
+    <a href="../jpg-to-pdf/index.html">JPG to PDF</a>
+    <a href="../png-to-pdf/index.html">PNG to PDF</a>
+    <a href="../jpg-to-png/index.html">JPG to PNG</a>
+    <a href="../png-to-jpg/index.html">PNG to JPG</a>
+  </div>
+</nav>
+
+<div class="converter-hero">
+  <div class="breadcrumb"><a href="../../index.html">Home</a> &rsaquo; PDF to JPG Converter</div>
+  <h1>PDF to JPG Converter</h1>
+  <p>Convert every page of your PDF to high-quality JPG images instantly — free, private, no signup needed.</p>
+</div>
+
+<div style="padding:0 20px 60px; background:#f8fafc;">
+<div class="converter-box">
+  <div class="drop-zone" id="dropZone" data-conv="pdf-to-jpg">
+    <div class="drop-icon">&#128444;</div>
+    <h3>Drop your PDF here</h3>
+    <p>or click to browse — supports PDF files</p>
+    <button class="btn-upload" onclick="document.getElementById('fileInput').click()">Select PDF File</button>
+    <input type="file" id="fileInput" accept=".pdf,application/pdf" style="display:none" />
+    <div class="file-list" id="fileList"></div>
+  </div>
+
+  <div class="converter-options">
+    <label>Output Quality</label>
+    <div class="option-row">
+      <button class="option-btn" data-group="quality" data-value="low">Web (Fast)</button>
+      <button class="option-btn selected" data-group="quality" data-value="standard">Standard</button>
+      <button class="option-btn" data-group="quality" data-value="high">High Quality</button>
+    </div>
+  </div>
+  <div class="converter-options" style="border-top:none;padding-top:0;margin-top:12px;">
+    <label>Resolution (DPI)</label>
+    <div class="option-row">
+      <button class="option-btn" data-group="dpi" data-value="72dpi">72 DPI</button>
+      <button class="option-btn selected" data-group="dpi" data-value="150dpi">150 DPI</button>
+      <button class="option-btn" data-group="dpi" data-value="300dpi">300 DPI</button>
+    </div>
+  </div>
+
+  <button class="convert-btn" id="convertBtn">&#9889; Convert PDF to JPG</button>
+
+  <div class="progress-wrap" id="progressWrap" style="display:none;">
+    <div class="progress-label"><span>Converting...</span><span id="progressText">0%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+  </div>
+
+  <div class="result-area" id="resultArea">
+    <div class="result-icon">&#9989;</div>
+    <h3>Conversion Complete!</h3>
+    <p>Your PDF pages have been converted to JPG images. Download them below.</p>
+    <div class="download-btns" id="downloadBtns"></div>
+    <div style="margin-top:12px;">
+      <button class="btn-reset" id="resetBtn">Convert Another File</button>
+    </div>
+  </div>
+  <div class="error-area" id="errorArea"></div>
+</div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-center">
+      <span class="section-label">Features</span>
+      <h2>Why Use Our PDF to JPG Converter?</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#128196;</div>
+        <h3>All Pages Converted</h3>
+        <p>Every page in your PDF is converted to a separate JPG image file, ready to download individually.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127775;</div>
+        <h3>High DPI Support</h3>
+        <p>Select 72, 150 or 300 DPI output for screen viewing, printing, or professional quality needs.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128274;</div>
+        <h3>Private &amp; Secure</h3>
+        <p>PDF processing happens in your browser using PDF.js. Your document never leaves your device.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#f8fafc; padding-top:0;">
+  <div class="container">
+    <div class="section-center" style="margin-bottom:28px;">
+      <h2>Related Converter Tools</h2>
+    </div>
+    <div class="related-grid">
+      <a href="../pdf-to-png/index.html" class="related-card"><span>&#128444;</span><div><strong>PDF to PNG</strong><small>Lossless PNG output</small></div></a>
+      <a href="../jpg-to-pdf/index.html" class="related-card"><span>&#128196;</span><div><strong>JPG to PDF</strong><small>Merge images to PDF</small></div></a>
+      <a href="../png-to-pdf/index.html" class="related-card"><span>&#128196;</span><div><strong>PNG to PDF</strong><small>PNG images to PDF</small></div></a>
+      <a href="../jpg-to-png/index.html" class="related-card"><span>&#128247;</span><div><strong>JPG to PNG</strong><small>Convert format</small></div></a>
+      <a href="../png-to-jpg/index.html" class="related-card"><span>&#128247;</span><div><strong>PNG to JPG</strong><small>Compress to JPG</small></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="../../index.html" class="logo">
+          <div class="logo-icon">T</div>
+          <span class="logo-text">Too<span style="color:#3b82f6">AI24</span></span>
+        </a>
+        <p>Free online PDF, JPG and PNG converter. All processing happens in your browser — private and free.</p>
+      </div>
+      <div class="footer-col">
+        <h4>PDF Tools</h4>
+        <a href="index.html">PDF to JPG</a>
+        <a href="../pdf-to-png/index.html">PDF to PNG</a>
+      </div>
+      <div class="footer-col">
+        <h4>Image to PDF</h4>
+        <a href="../jpg-to-pdf/index.html">JPG to PDF</a>
+        <a href="../png-to-pdf/index.html">PNG to PDF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Image Tools</h4>
+        <a href="../jpg-to-png/index.html">JPG to PNG</a>
+        <a href="../png-to-jpg/index.html">PNG to JPG</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2024 TooAI24.com</span>
+      <div style="display:flex;gap:20px;"><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../../assets/converter.js"></script>
+</body>
+</html>
